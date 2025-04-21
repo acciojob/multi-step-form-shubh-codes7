@@ -5,7 +5,7 @@ const Step = ({ step, data, onChange, onNext, onPrevious, onSubmit }) => {
   return (
     <form onSubmit={onSubmit}>
       {step === 1 && (
-        <>
+        <div id="step1">
 					<h2>Customer Details</h2>
           <label>
             First Name:{" "}
@@ -20,11 +20,11 @@ const Step = ({ step, data, onChange, onNext, onPrevious, onSubmit }) => {
             Last Name:{" "}
             <input id="last_name" value={data.last_name} onChange={onChange} />
           </label>
-        </>
+        </div>
       )}
 
       {step === 2 && (
-        <>
+        <div id="step2">
 					<h2>Car Details</h2>
           <label>
             Car Model:{" "}
@@ -35,11 +35,11 @@ const Step = ({ step, data, onChange, onNext, onPrevious, onSubmit }) => {
             Car Price:{" "}
             <input id="car_price" value={data.car_price} onChange={onChange} />
           </label>
-        </>
+        </div>
       )}
 
       {step === 3 && (
-        <>
+        <div id="step3">
 					<h2>Payment Details</h2>
           <label>
             Credit Card Number:{" "}
@@ -55,7 +55,7 @@ const Step = ({ step, data, onChange, onNext, onPrevious, onSubmit }) => {
               onChange={onChange}
             />
           </label>
-        </>
+        </div>
       )}
 
       <div style={{ marginTop: "1rem" }}>
